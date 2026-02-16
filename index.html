@@ -315,6 +315,67 @@
     .mobile-menu a { color: var(--text-bright); text-decoration: none; font-size: 22px; font-weight: 600; }
     .mobile-menu .close-btn { position: absolute; top: 20px; right: 24px; background: none; border: none; color: white; font-size: 28px; cursor: pointer; }
 
+    /* CONTACT MODAL */
+    .modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(6px);
+      z-index: 300; align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--dark-card); border: 1px solid var(--dark-border);
+      border-radius: 20px; padding: 40px; max-width: 480px; width: 100%;
+      position: relative; max-height: 90vh; overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; background: none; border: none;
+      color: var(--text-dim); font-size: 24px; cursor: pointer; transition: color 0.2s;
+    }
+    .modal-close:hover { color: var(--text-bright); }
+    .modal h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 24px;
+      color: var(--text-bright); margin-bottom: 6px;
+    }
+    .modal p { font-size: 14px; color: var(--text-dim); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: 13px; font-weight: 600; color: var(--text);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border-radius: 10px;
+      border: 1px solid var(--dark-border); background: var(--surface);
+      color: var(--text-bright); font-family: 'DM Sans', sans-serif; font-size: 14px;
+      transition: border-color 0.2s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--purple);
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group select option { background: var(--surface); color: var(--text-bright); }
+    .form-submit {
+      width: 100%; padding: 14px; border-radius: 10px; border: none;
+      background: var(--purple); color: white; font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700; font-size: 15px; cursor: pointer; transition: all 0.25s;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.35);
+    }
+    .form-submit:hover { background: #6d28d9; transform: translateY(-2px); }
+    .form-or {
+      text-align: center; font-size: 13px; color: var(--text-dim); margin-top: 16px;
+    }
+    .form-or a { color: var(--purple); text-decoration: none; font-weight: 600; }
+    .form-or a:hover { text-decoration: underline; }
+    .form-success {
+      text-align: center; padding: 40px 20px;
+    }
+    .form-success .checkmark { font-size: 48px; margin-bottom: 16px; }
+    .form-success h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 22px;
+      color: var(--text-bright); margin-bottom: 8px;
+    }
+    .form-success p { font-size: 14px; color: var(--text-dim); }
+
     /* ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(28px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -362,7 +423,7 @@
       </div>
       <div class="nav-cta">
         <a href="https://app.stonenavigator.com" class="nav-login">Log In</a>
-        <a href="#pricing" class="btn btn-primary">Get Started</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Get Started</a>
       </div>
       <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')">☰</button>
     </div>
@@ -376,7 +437,7 @@
     <a href="#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
     <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
     <a href="https://app.stonenavigator.com">Log In</a>
-    <a href="#pricing" class="btn btn-primary" onclick="document.getElementById('mobileMenu').classList.remove('open')">Get Started</a>
+    <a href="javascript:void(0)" class="btn btn-primary" onclick="document.getElementById('mobileMenu').classList.remove('open');openModal()">Get Started</a>
   </div>
 
   <!-- HERO -->
@@ -386,7 +447,7 @@
       <h1 class="fade-up">Run Your Granite Shop<br><em>Like a Pro</em></h1>
       <p class="hero-sub fade-up">Drawings, estimates, invoices, scheduling, and payments — all in one platform built by granite shop owners, for granite shop owners.</p>
       <div class="hero-ctas fade-up">
-        <a href="#pricing" class="btn btn-primary">Start Today →</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Start Today →</a>
         <a href="#features" class="btn btn-outline">See Features</a>
       </div>
       <div class="hero-stats fade-up">
@@ -677,7 +738,7 @@
             <li>CRM & Contacts</li>
             <li>2-Way Text & Email</li>
           </ul>
-          <a href="#" class="btn btn-outline">Get Started</a>
+          <a href="javascript:void(0)" onclick="openModal('Professional')" class="btn btn-outline">Get Started</a>
         </div>
         <!-- Enterprise -->
         <div class="pricing-card featured fade-up">
@@ -699,7 +760,7 @@
             <li>Missed Call Text-Back</li>
             <li>Sales Pipelines & Reporting</li>
           </ul>
-          <a href="#" class="btn btn-primary">Get Started</a>
+          <a href="javascript:void(0)" onclick="openModal('Enterprise')" class="btn btn-primary">Get Started</a>
         </div>
         <!-- Custom -->
         <div class="pricing-card fade-up">
@@ -718,7 +779,7 @@
             <li>Volume Discounts</li>
             <li>SLA Agreement</li>
           </ul>
-          <a href="mailto:hello@stonenavigator.com" class="btn btn-outline">Contact Sales</a>
+          <a href="javascript:void(0)" onclick="openModal('Custom')" class="btn btn-outline">Contact Sales</a>
         </div>
       </div>
       <div class="pricing-guarantee fade-up">
@@ -799,7 +860,7 @@
       <div class="section-title fade-up" style="text-align:center;">Ready to run your shop<br>like a pro?</div>
       <p class="section-desc fade-up" style="text-align:center;margin:0 auto 32px;">Join granite shops that switched from spreadsheets and sticky notes to the platform built for how they actually work.</p>
       <div style="text-align:center;" class="fade-up">
-        <a href="#pricing" class="btn btn-primary" style="padding:16px 40px;font-size:16px;">Get Started Today →</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="padding:16px 40px;font-size:16px;">Get Started Today →</a>
       </div>
     </div>
   </section>
@@ -830,7 +891,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <a href="#">About</a>
-          <a href="mailto:hello@stonenavigator.com">Contact</a>
+          <a href="mailto:info@stonenavigator.com">Contact</a>
           <a href="#">Blog</a>
         </div>
         <div class="footer-col">
@@ -846,6 +907,55 @@
     </div>
   </footer>
 
+  <!-- CONTACT MODAL -->
+  <div class="modal-overlay" id="contactModal" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="formContent">
+        <h2>Get Started</h2>
+        <p>Tell us about your shop and we'll get you set up.</p>
+        <form id="contactForm" action="https://formsubmit.co/info@stonenavigator.com" method="POST">
+          <input type="hidden" name="_subject" value="New Lead from Stone Navigator Website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" id="formRedirect">
+          <input type="text" name="_honey" style="display:none">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label>Shop Name</label>
+            <input type="text" name="shop_name" placeholder="Your business name">
+          </div>
+          <div class="form-group">
+            <label>Plan Interest</label>
+            <select name="plan" id="planSelect">
+              <option value="Professional ($297/mo)">Professional — $297/mo</option>
+              <option value="Enterprise ($497/mo)">Enterprise — $497/mo</option>
+              <option value="Custom">Custom — Let's talk</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your shop — how many employees, current tools you use, etc."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+          <div class="form-or">Or email us directly at <a href="mailto:info@stonenavigator.com">info@stonenavigator.com</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Nav scroll
     const nav = document.getElementById('nav');
@@ -856,8 +966,10 @@
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const el = document.querySelector(a.getAttribute('href'));
+        const el = document.querySelector(href);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
@@ -872,6 +984,44 @@
     function toggleFaq(btn) {
       btn.classList.toggle('open');
       btn.nextElementSibling.classList.toggle('open');
+    }
+
+    // Contact Modal
+    function openModal(plan) {
+      const modal = document.getElementById('contactModal');
+      const select = document.getElementById('planSelect');
+      if (plan && select) {
+        for (let opt of select.options) {
+          if (opt.value.toLowerCase().includes(plan.toLowerCase())) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+      document.getElementById('formRedirect').value = window.location.href + '?thanks=1';
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Show success if redirected back from formsubmit
+    if (window.location.search.includes('thanks=1')) {
+      document.getElementById('contactModal').classList.add('open');
+      document.getElementById('formContent').innerHTML = `
+        <div class="form-success">
+          <div class="checkmark">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thanks for your interest! We'll get back to you within 24 hours.</p>
+          <br>
+          <button class="form-submit" onclick="closeModal();history.replaceState(null,'',location.pathname);">Close</button>
+        </div>
+      `;
     }
   </script>
 </body>
