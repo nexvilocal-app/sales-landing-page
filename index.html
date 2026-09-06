@@ -282,7 +282,7 @@
 
     /* FINAL CTA */
     .final-cta {
-      padding: 100px 0; text-align: center; position: relative;
+      padding: 100px 0; text-align: center; position: relative; overflow: hidden;
     }
     .final-cta::before {
       content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
@@ -987,6 +987,9 @@
     }
 
     // Contact Modal
+    const formContent = document.getElementById('formContent');
+    const contactFormMarkup = formContent.innerHTML;
+
     function openModal(plan) {
       const modal = document.getElementById('contactModal');
       const select = document.getElementById('planSelect');
@@ -998,7 +1001,9 @@
           }
         }
       }
-      document.getElementById('formRedirect').value = window.location.href + '?thanks=1';
+      const returnUrl = new URL(window.location.href);
+      returnUrl.searchParams.set('thanks', '1');
+      document.getElementById('formRedirect').value = returnUrl.href;
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -1006,20 +1011,27 @@
     function closeModal() {
       document.getElementById('contactModal').classList.remove('open');
       document.body.style.overflow = '';
+      if (formContent.querySelector('.form-success')) {
+        formContent.innerHTML = contactFormMarkup;
+        const returnUrl = new URL(window.location.href);
+        returnUrl.searchParams.delete('thanks');
+        history.replaceState(null, '', returnUrl.pathname + returnUrl.search + returnUrl.hash);
+      }
     }
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
     // Show success if redirected back from formsubmit
-    if (window.location.search.includes('thanks=1')) {
+    if (new URL(window.location.href).searchParams.get('thanks') === '1') {
       document.getElementById('contactModal').classList.add('open');
-      document.getElementById('formContent').innerHTML = `
+      document.body.style.overflow = 'hidden';
+      formContent.innerHTML = `
         <div class="form-success">
           <div class="checkmark">✅</div>
           <h3>Message Sent!</h3>
           <p>Thanks for your interest! We'll get back to you within 24 hours.</p>
           <br>
-          <button class="form-submit" onclick="closeModal();history.replaceState(null,'',location.pathname);">Close</button>
+          <button class="form-submit" onclick="closeModal();">Close</button>
         </div>
       `;
     }
