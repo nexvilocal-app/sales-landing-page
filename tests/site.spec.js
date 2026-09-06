@@ -18,7 +18,7 @@ test('page loads without JavaScript errors or missing local assets', async ({ pa
     nodes.map((n) => n.getAttribute('src') || n.getAttribute('href')).filter((url) => url && !/^(https?:|data:)/.test(url)));
   for (const path of assets) expect((await request.get(path)).ok(), `Missing asset: ${path}`).toBeTruthy();
   expect(errors).toEqual([]);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBeTruthy();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1)).toBeTruthy();
 });
 
 test('section navigation and mobile menu work', async ({ page }, testInfo) => {
@@ -65,7 +65,10 @@ test('form validates, preserves campaign return URL, and can be used after succe
   await page.route('https://formsubmit.co/**', async (route) => {
     expect(route.request().method()).toBe('POST');
     submitted = Object.fromEntries(new URLSearchParams(route.request().postData()));
-    await route.fulfill({ status: 302, headers: { location: submitted._next }, body: '' });
+    // WebKit interception cannot synthesize HTTP redirects. Return an HTML
+    // redirect to the exact URL submitted by the real form instead.
+    await route.fulfill({ contentType: 'text/html',
+      body: `<script>location.replace(${JSON.stringify(submitted._next)})</script>` });
   });
   await page.goto('/?utm_source=ci#pricing');
   await page.locator("a[onclick=\"openModal('Enterprise')\"]").click();
