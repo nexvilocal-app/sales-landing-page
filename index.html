@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stone Navigator | Business Software for Granite & Countertop Fabricators</title>
-  <meta name="description" content="All-in-one business management software for granite and countertop fabrication shops. Drawings, estimates, invoices, scheduling, and payments. Built by fabricators, for fabricators.">
-  <meta property="og:title" content="Stone Navigator — Run Your Granite Shop Like a Pro">
-  <meta property="og:description" content="Drawings, estimates, invoices, scheduling, and payments — all in one platform built for stone fabricators.">
+  <title>Stone Navigator | Countertop Shop Software from Drawing to CNC</title>
+  <meta name="description" content="Software for granite and countertop shops: draw the job, auto-arrange pieces onto slabs, get customer approval on a 3D textured from the real slab, export CNC-ready DXF, and take payment online.">
+  <meta property="og:title" content="Stone Navigator — The 3D your customer approves is the slab they're getting">
+  <meta property="og:description" content="Drawing, auto-arranged slabs, textured 3D customer approval, CNC-ready DXF export and online payment in one app built for countertop fabricators.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stonenavigator.com">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -121,6 +121,12 @@
     }
     .hero-stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 28px; color: var(--text-bright); }
     .hero-stat-label { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+    .hero-shot {
+      margin: 56px auto 0; max-width: 960px; border-radius: 16px; overflow: hidden;
+      border: 1px solid var(--dark-border); box-shadow: 0 24px 80px rgba(124,58,237,0.15);
+    }
+    .hero-shot img { display: block; width: 100%; height: auto; }
+    .hero-shot figcaption { padding: 14px 20px; font-size: 13px; color: var(--text-dim); background: var(--dark-card); text-align: left; }
 
     /* APP CHAOS */
     .chaos { padding: 100px 0; position: relative; }
@@ -202,10 +208,14 @@
     }
     .feature-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 17px; color: var(--text-bright); margin-bottom: 8px; }
     .feature-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+    .feature-shot {
+      display: block; width: calc(100% + 64px); max-width: none; height: 200px; margin: -32px -32px 22px;
+      object-fit: cover; object-position: center top; border-bottom: 1px solid var(--dark-border);
+    }
 
     /* HOW IT WORKS */
     .how { padding: 100px 0; background: var(--surface); }
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-top: 48px; }
     .step { text-align: center; position: relative; }
     .step-number {
       width: 52px; height: 52px; border-radius: 50%; background: var(--purple);
@@ -232,7 +242,7 @@
       transform: scale(1.04);
     }
     .pricing-card.featured::before {
-      content: 'Most Popular'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      content: 'Recommended'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
       background: var(--purple); color: white; padding: 4px 18px; border-radius: 100px;
       font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
     }
@@ -436,7 +446,7 @@
     <a href="#how-it-works" onclick="document.getElementById('mobileMenu').classList.remove('open')">How It Works</a>
     <a href="#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
     <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
-    <a href="https://crm.stonenavigator.com">Log In</a>
+    <a href="https://app.stonenavigator.com">Log In</a>
     <a href="javascript:void(0)" class="btn btn-primary" onclick="document.getElementById('mobileMenu').classList.remove('open');openModal()">Get Started</a>
   </div>
 
@@ -444,18 +454,23 @@
   <section class="hero">
     <div class="container">
       <div class="hero-badge">30-Day Money-Back Guarantee</div>
-      <h1 class="fade-up">Run Your Granite Shop<br><em>Like a Pro</em></h1>
-      <p class="hero-sub fade-up">Drawings, estimates, invoices, scheduling, and payments — all in one platform built by granite shop owners, for granite shop owners.</p>
+      <h1 class="fade-up">The 3D your customer approves<br><em>is the slab they're getting.</em></h1>
+      <p class="hero-sub fade-up">Draw the job, auto-arrange the pieces onto your slabs, and send your customer a 3D textured from the actual slab each piece is nested on. Then export CNC-ready DXF and take payment online, all in one app built by a granite shop owner.</p>
       <div class="hero-ctas fade-up">
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Start Today →</a>
-        <a href="#features" class="btn btn-outline">See Features</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Get Started →</a>
+        <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
       </div>
       <div class="hero-stats fade-up">
-        <div><div class="hero-stat-value">10 min</div><div class="hero-stat-label">Average estimate time</div></div>
-        <div><div class="hero-stat-value">50%</div><div class="hero-stat-label">Less admin work</div></div>
-        <div><div class="hero-stat-value">24/7</div><div class="hero-stat-label">Online payments</div></div>
-        <div><div class="hero-stat-value">2x</div><div class="hero-stat-label">Faster invoicing</div></div>
+        <div><div class="hero-stat-value">Draw</div><div class="hero-stat-label">Countertop drawing</div></div>
+        <div><div class="hero-stat-value">Arrange</div><div class="hero-stat-label">Pieces onto your slabs</div></div>
+        <div><div class="hero-stat-value">Approve</div><div class="hero-stat-label">Textured 3D for the customer</div></div>
+        <div><div class="hero-stat-value">Export</div><div class="hero-stat-label">CNC-ready DXF</div></div>
+        <div><div class="hero-stat-value">Get paid</div><div class="hero-stat-label">Online payment</div></div>
       </div>
+      <figure class="hero-shot fade-up">
+        <img src="images/textured-3d.jpg" width="1600" height="947" alt="Countertop pieces in 3D, each textured from the slab photo it is nested on">
+        <figcaption>Every piece in 3D is textured from the photo of the slab it's nested on.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -465,7 +480,7 @@
       <div class="section-label">Why We Built This</div>
       <div class="section-title fade-up">We were running our shop with<br>8 different apps</div>
       <div class="chaos-intro fade-up">
-        As a granite fabrication shop owner, I was <strong>juggling a different app for everything</strong> — one for drawings, another for estimates, a separate one for invoices, yet another for scheduling. Navigating to job sites? I'd literally type the address into my phone's nav bar. No CRM, no automation, no way to see what my team was doing. <strong>Sound familiar?</strong>
+        As a granite fabrication shop owner, I was <strong>juggling a different app for everything</strong> — one for drawings, another for estimates, a separate one for invoices, yet another for scheduling. Navigating to job sites? I'd literally type the address into my phone's nav bar. No one place for customer records, no automation, and every layout drawn twice: once for the quote, once for the saw. <strong>Sound familiar?</strong>
       </div>
       
       <div class="chaos-grid-wrapper fade-up">
@@ -503,14 +518,14 @@
           <div class="chaos-app">
             <div class="x-badge">✕</div>
             <div class="chaos-app-icon">📇</div>
-            <div class="chaos-app-name">No CRM</div>
+            <div class="chaos-app-name">No Customer Records</div>
             <div class="chaos-app-desc">Contacts everywhere</div>
           </div>
           <div class="chaos-app">
             <div class="x-badge">✕</div>
-            <div class="chaos-app-icon">📧</div>
-            <div class="chaos-app-name">Email Tool</div>
-            <div class="chaos-app-desc">Marketing blasts</div>
+            <div class="chaos-app-icon">🖥️</div>
+            <div class="chaos-app-name">CAD Software</div>
+            <div class="chaos-app-desc">Re-drawing for the saw</div>
           </div>
           <div class="chaos-app">
             <div class="x-badge">✕</div>
@@ -529,35 +544,47 @@
       <div class="one-app fade-up">
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Countertop Drawings</h4><p>Visual layout tool with auto square footage</p></div>
+          <div><h4>Countertop Drawings</h4><p>Edges, splashes, cutouts and square feet per piece</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Estimates & Invoices</h4><p>Generate, send, and get paid — one flow</p></div>
+          <div><h4>Slab Layout</h4><p>Auto-arranges pieces onto your slabs</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Online Payments</h4><p>Clients pay with a link. No more chasing.</p></div>
+          <div><h4>Textured 3D Approval</h4><p>The customer approves the stone they're getting</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Smart Scheduling</h4><p>Templates, installs, crew calendar</p></div>
+          <div><h4>CNC Prep</h4><p>CNC-ready DXF export for your CAM software</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Full CRM</h4><p>Contacts, pipelines, call recordings</p></div>
+          <div><h4>Estimates & Invoices</h4><p>Built from the drawing, priced at your rates</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Unified Inbox</h4><p>All texts, emails, calls in one place</p></div>
+          <div><h4>Online Payments</h4><p>Card or bank transfer from the invoice link</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Automations</h4><p>Appointment reminders, ETA to customers</p></div>
+          <div><h4>Field Crew App</h4><p>Jobs, photos, checklists and sign-off on the phone</p></div>
         </div>
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Social & Reputation</h4><p>Job photos → posts. Review requests on autopilot.</p></div>
+          <div><h4>Scheduling</h4><p>Templates, installs and a job board</p></div>
+        </div>
+        <div class="one-app-item">
+          <div class="one-app-check">✓</div>
+          <div><h4>Customer Records</h4><p>Every contact stored in one place</p></div>
+        </div>
+        <div class="one-app-item">
+          <div class="one-app-check">✓</div>
+          <div><h4>Automations</h4><p>Appointment reminders, arrival-time texts to customers</p></div>
+        </div>
+        <div class="one-app-item">
+          <div class="one-app-check">✓</div>
+          <div><h4>Social & Reputation</h4><p>Job posts and review requests</p></div>
         </div>
       </div>
     </div>
@@ -573,7 +600,17 @@
         <div class="problem-card fade-up">
           <div class="problem-icon">📝</div>
           <h3>Manual Estimates Take Forever</h3>
-          <p>Measuring, calculating square footage, adding edges, sinks, and labor by hand. One estimate takes 30–45 minutes. Miss a detail and you eat the cost.</p>
+          <p>Measuring, calculating square footage, adding edges, sinks, and labor by hand. Miss a detail and you eat the cost.</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">🪨</div>
+          <h3>They Approved a Sample, Not the Slab</h3>
+          <p>A sample photo isn't the slab on your rack. When the veining looks different on install day, you're the one explaining it.</p>
+        </div>
+        <div class="problem-card fade-up">
+          <div class="problem-icon">📐</div>
+          <h3>Drawing Every Job Twice</h3>
+          <p>The layout gets drawn for the quote, then drawn again for the saw. Every re-draw is another chance for a wrong number.</p>
         </div>
         <div class="problem-card fade-up">
           <div class="problem-icon">💸</div>
@@ -581,19 +618,9 @@
           <p>Waiting on checks, following up on deposits, tracking who paid what. Cash flow shouldn't depend on how fast the mail arrives.</p>
         </div>
         <div class="problem-card fade-up">
-          <div class="problem-icon">📅</div>
-          <h3>Scheduling Chaos</h3>
-          <p>Double-booked installs, forgotten template appointments, crews showing up without the right slabs. Your calendar is a warzone.</p>
-        </div>
-        <div class="problem-card fade-up">
-          <div class="problem-icon">🔇</div>
-          <h3>No Visibility Into Your Team</h3>
-          <p>Who talked to which customer? What was promised? As the owner, you're flying blind. No call logs, no message history, no way to manage it.</p>
-        </div>
-        <div class="problem-card fade-up">
           <div class="problem-icon">🤖</div>
           <h3>Zero Automation</h3>
-          <p>No appointment reminders, no follow-ups, no "your tech is on the way" texts. Everything is manual — which means things get forgotten.</p>
+          <p>No appointment reminders, no "we're on the way" texts. Everything is manual — which means things get forgotten.</p>
         </div>
         <div class="problem-card fade-up">
           <div class="problem-icon">👻</div>
@@ -608,68 +635,68 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-label">Features</div>
-      <div class="section-title fade-up">Everything your shop needs</div>
+      <div class="section-title fade-up">From the drawing to the install</div>
       <div class="section-desc fade-up">Purpose-built tools for countertop fabricators — not generic business software with granite duct-taped on.</div>
       <div class="features-grid">
         <div class="feature-card fade-up">
-          <div class="feature-icon">✏️</div>
-          <h3>Visual Drawing Tool</h3>
-          <p>Draw countertop layouts with edges, cutouts, sinks, and backsplashes. Clients see exactly what they're getting. Auto-calculates square footage.</p>
+          <img class="feature-shot" src="images/drawing.jpg" width="1600" height="974" loading="lazy" alt="The countertop drawing screen with dimensioned pieces, splashes and waterfalls">
+          <h3>Countertop Drawing</h3>
+          <p>Start from ready-made shapes or trace a run along a wall. Add edge profiles, backsplashes, waterfalls, aprons and sink cutouts. Edge lengths and square feet show on every piece.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <img class="feature-shot" src="images/auto-arrange.jpg" width="1600" height="736" loading="lazy" alt="Countertop pieces arranged on two calibrated slab photos, with percent used per slab">
+          <h3>Auto-Arrange on Slabs</h3>
+          <p>Add your slabs from calibrated photos. One button splits oversized pieces with seams, auto-arranges pieces onto slabs of the right material, and tells you if you need more stone. Drag anything by hand.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <img class="feature-shot" src="images/vein-match.jpg" width="1600" height="769" loading="lazy" alt="Vein match view: slabs on the left, finished stone pieces on the right">
+          <h3>Vein Matching</h3>
+          <p>Slabs and finished stone side by side. Move a piece on the slab and its veining updates live in the stone view, so you match the joints by eye before anything is cut.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <img class="feature-shot" src="images/customer-view.jpg" width="1600" height="1089" loading="lazy" alt="The customer's approval page: a textured 3D countertop with an Approve this design button">
+          <h3>Textured 3D Customer Approval</h3>
+          <p>The 3D your customer approves is the slab they're getting. Each piece is textured from the photo of the slab it's nested on. Send it by email or text; the customer turns it, approves it and signs.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <img class="feature-shot" src="images/cnc-prep.jpg" width="1600" height="575" loading="lazy" alt="CNC prep: pieces with seams laid out on two slabs beside a textured preview">
+          <h3>CNC Prep</h3>
+          <p>Import DXF templates, place pieces on your slab photos and set seams that cut cleanly through cutouts and radiused corners. Export CNC-ready DXF for your CAM software, checked against the source before download.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <img class="feature-shot" src="images/field-app.jpg" width="545" height="900" loading="lazy" style="object-position: center 30%;" alt="The field app on a phone showing an install checklist">
+          <h3>Field Crew App</h3>
+          <p>A web-based app on your crew's phones: the day's jobs, directions in the phone's map app, an arrival-time text to the customer, the work order and quoted drawings, before-and-after photos, a checklist and the customer's sign-off. Needs a data connection.</p>
         </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📋</div>
-          <h3>Professional Estimates</h3>
-          <p>Generate branded estimates in minutes — materials, labor, edges, and extras. Send a link, clients approve online. No more back-and-forth.</p>
+          <h3>Estimates from the Drawing</h3>
+          <p>Import the drawing and the estimate builds itself room by room: square feet, edges by profile and cutouts, priced at your own rates. Send a branded link and the customer accepts online.</p>
         </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">💳</div>
-          <h3>Online Payments</h3>
-          <p>Accept deposits and final payments via Stripe. Clients pay with a link — credit card, Apple Pay. Money in your bank account, not in the mail.</p>
-        </div>
-        <div class="feature-card fade-up">
-          <div class="feature-icon">🧾</div>
-          <h3>Invoicing</h3>
-          <p>Turn approved estimates into invoices with one click. Track payment status, send reminders, and download PDFs for your records.</p>
+          <h3>Invoices & Online Payments</h3>
+          <p>Turn the estimate into an invoice with a deposit and balance schedule. Customers pay by card or bank transfer from their invoice link. Money in your bank account, not in the mail.</p>
         </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📆</div>
-          <h3>Smart Scheduling</h3>
-          <p>Schedule templates, installs, and shop time. See your crew's availability at a glance. Syncs with Google Calendar so nothing falls through the cracks.</p>
-        </div>
-        <div class="feature-card fade-up">
-          <div class="feature-icon">📦</div>
-          <h3>Products & Pricing</h3>
-          <p>Manage your stone inventory, edge profiles, and labor rates. Set tiered pricing so estimates auto-calculate based on material and complexity.</p>
-        </div>
-        <div class="feature-card fade-up">
-          <div class="feature-icon">📱</div>
-          <h3>Unified Inbox</h3>
-          <p>Every text, email, and call in one place. See your entire team's conversations. As the owner, you finally have full visibility into what's happening.</p>
+          <h3>Scheduling & Job Board</h3>
+          <p>Book templates, installs and consultations, with repeat bookings and double-booking warnings. Drag jobs across the job board as they move through production.</p>
         </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">🤖</div>
           <h3>Automations</h3>
-          <p>Appointment reminders sent automatically. "Your technician is on the way" ETA texts when a crew starts driving. Follow-ups that never get forgotten.</p>
-        </div>
-        <div class="feature-card fade-up">
-          <div class="feature-icon">📞</div>
-          <h3>CRM & Call Recording</h3>
-          <p>Full contact management with sales pipelines. Every call recorded and logged. Know exactly what was said and promised — no more he-said-she-said.</p>
+          <p>Appointment reminders to your customers, and an arrival-time text when the crew starts the drive. We set it up once; your shop never touches another app for it.</p>
         </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📸</div>
           <h3>Social & Reputation</h3>
-          <p>Turn job photos into social media posts for brand visibility. Automatically request reviews from happy customers. Build your online presence on autopilot.</p>
-        </div>
-        <div class="feature-card fade-up">
-          <div class="feature-icon">✉️</div>
-          <h3>Email Marketing</h3>
-          <p>Stay top of mind with past clients. Send seasonal promotions, new material announcements, and referral requests — all from one place.</p>
+          <p>When a crew completes a job, post a check-in to your business listing and social channels, and ask the customer for a review the next day. Set up once for your shop.</p>
         </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📊</div>
           <h3>Business Dashboard</h3>
-          <p>See your revenue, pipeline value, job status, and team performance at a glance. Make decisions with data, not gut feelings.</p>
+          <p>What needs attention today, this week's and month's sales and collections against your goals, and jobs by status. Make decisions with data, not gut feelings.</p>
         </div>
       </div>
     </div>
@@ -679,31 +706,37 @@
   <section class="how" id="how-it-works">
     <div class="container">
       <div class="section-label">How It Works</div>
-      <div class="section-title fade-up">From lead to install in 4 steps</div>
+      <div class="section-title fade-up">From drawing to paid in 5 steps</div>
       <div class="section-desc fade-up">Stone Navigator follows your actual workflow — not the other way around.</div>
       <div class="steps">
         <div class="step fade-up">
           <div class="step-connector"></div>
           <div class="step-number">1</div>
-          <h3>New Lead Comes In</h3>
-          <p>Customer inquiry arrives. Create a job and start a drawing right away.</p>
+          <h3>Draw It</h3>
+          <p>Draw the countertops with edges, splashes, waterfalls and cutouts. The estimate builds from the drawing.</p>
         </div>
         <div class="step fade-up">
           <div class="step-connector"></div>
           <div class="step-number">2</div>
-          <h3>Draw & Estimate</h3>
-          <p>Use the visual tool to draw the layout. Generate a professional estimate in minutes.</p>
+          <h3>Arrange on Slabs</h3>
+          <p>Load your slab photos. Stone Navigator auto-arranges pieces onto slabs; you fine-tune and match veins by eye.</p>
         </div>
         <div class="step fade-up">
           <div class="step-connector"></div>
           <div class="step-number">3</div>
-          <h3>Client Pays Online</h3>
-          <p>Send the estimate link. Client approves and pays the deposit — no chasing required.</p>
+          <h3>Customer Approves in 3D</h3>
+          <p>Send a 3D textured from the actual slab each piece is nested on. The customer approves and signs online.</p>
         </div>
         <div class="step fade-up">
+          <div class="step-connector"></div>
           <div class="step-number">4</div>
-          <h3>Schedule & Install</h3>
-          <p>Book the template and install dates. Your team sees everything on the calendar.</p>
+          <h3>Export CNC-Ready DXF</h3>
+          <p>Lay out and seam the pieces in CNC prep, then export DXF for your CAM software.</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-number">5</div>
+          <h3>Get Paid Online</h3>
+          <p>Send the invoice link. The customer pays the deposit and balance by card or bank transfer.</p>
         </div>
       </div>
     </div>
@@ -719,7 +752,7 @@
       </div>
       <div class="pricing-grid">
         <!-- Professional -->
-        <div class="pricing-card fade-up">
+        <div class="pricing-card featured fade-up">
           <div class="pricing-name">Professional</div>
           <div class="pricing-desc">Everything you need to run your shop</div>
           <div style="margin:20px 0 4px;">
@@ -728,21 +761,23 @@
           </div>
           <div class="pricing-users">Up to 5 users · Extra users +$29/mo</div>
           <ul class="pricing-features">
-            <li>Visual Drawing Tool</li>
-            <li>Professional Estimates</li>
-            <li>Invoicing & PDF Downloads</li>
-            <li>Online Payments (Stripe)</li>
-            <li>Job Scheduling</li>
+            <li>Countertop Drawing</li>
+            <li>Auto-Arrange on Slabs</li>
+            <li>Vein Matching with Live Preview</li>
+            <li>Textured 3D Customer Approval</li>
+            <li>CNC Prep & CNC-Ready DXF Export</li>
+            <li>Estimates from the Drawing</li>
+            <li>Invoices & Online Payments</li>
+            <li>Field Crew App</li>
+            <li>Scheduling & Job Board</li>
             <li>Products & Price Lists</li>
-            <li>Customer Portal</li>
-            <li>CRM & Contacts</li>
-            <li>2-Way Text & Email</li>
+            <li>Customer Records</li>
           </ul>
-          <a href="javascript:void(0)" onclick="openModal('Professional')" class="btn btn-outline">Get Started</a>
+          <a href="javascript:void(0)" onclick="openModal('Professional')" class="btn btn-primary">Get Started</a>
         </div>
-        <!-- Enterprise -->
-        <div class="pricing-card featured fade-up">
-          <div class="pricing-name">Enterprise</div>
+        <!-- Professional + Marketing Setup -->
+        <div class="pricing-card fade-up">
+          <div class="pricing-name">Professional + Marketing Setup</div>
           <div class="pricing-desc">For growing shops and teams</div>
           <div style="margin:20px 0 4px;">
             <span class="pricing-amount">$497</span>
@@ -751,16 +786,12 @@
           <div class="pricing-users">Up to 12 users · Extra users +$25/mo</div>
           <ul class="pricing-features">
             <li>Everything in Professional</li>
-            <li>Unified Inbox (team visibility)</li>
             <li>Automations & Workflows</li>
-            <li>Call Recording & Logging</li>
             <li>Reputation Management</li>
-            <li>Email Marketing</li>
             <li>Social Media Planner</li>
-            <li>Missed Call Text-Back</li>
             <li>Sales Pipelines & Reporting</li>
           </ul>
-          <a href="javascript:void(0)" onclick="openModal('Enterprise')" class="btn btn-primary">Get Started</a>
+          <a href="javascript:void(0)" onclick="openModal('Enterprise')" class="btn btn-outline">Get Started</a>
         </div>
         <!-- Custom -->
         <div class="pricing-card fade-up">
@@ -771,8 +802,7 @@
           </div>
           <div class="pricing-users">Unlimited users · Custom pricing</div>
           <ul class="pricing-features">
-            <li>Everything in Enterprise</li>
-            <li>Custom Integrations</li>
+            <li>Everything in Professional + Marketing Setup</li>
             <li>Dedicated Onboarding</li>
             <li>Priority Support</li>
             <li>Custom Feature Development</li>
@@ -788,8 +818,10 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
+  <!-- TESTIMONIALS: placeholder for a real customer testimonial.
+       Hidden until one exists. To publish: remove the "hidden" attribute and
+       fill in the card below with a real quote, used with the customer's permission. -->
+  <section class="testimonials" id="testimonials" hidden>
     <div class="container">
       <div style="text-align:center;">
         <div class="section-label">Testimonials</div>
@@ -797,22 +829,9 @@
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card fade-up">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Creating estimates used to take me 45 minutes. Now it's 10. And clients can pay online — I stopped chasing checks completely."</p>
-          <div class="testimonial-author">Mike R.</div>
-          <div class="testimonial-role">Owner, Custom Stone Works</div>
-        </div>
-        <div class="testimonial-card fade-up">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"The drawing tool is incredible. My clients love seeing exactly what their countertops will look like before we cut anything."</p>
-          <div class="testimonial-author">Sarah T.</div>
-          <div class="testimonial-role">Operations Manager, Elite Granite</div>
-        </div>
-        <div class="testimonial-card fade-up">
-          <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Finally, software that understands how a granite shop actually works. Not some generic tool with 'construction' slapped on it."</p>
-          <div class="testimonial-author">David L.</div>
-          <div class="testimonial-role">Founder, Precision Stone</div>
+          <p class="testimonial-text">"REAL TESTIMONIAL GOES HERE"</p>
+          <div class="testimonial-author">Name</div>
+          <div class="testimonial-role">Role, Shop name</div>
         </div>
       </div>
     </div>
@@ -828,27 +847,27 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Do I need any special equipment or software?</button>
-          <div class="faq-a">Nope. Stone Navigator runs in your browser — works on any computer, tablet, or phone. No downloads, no installations.</div>
+          <div class="faq-a">Nope. Stone Navigator runs in your browser on a computer, tablet or phone, and you can add it to a phone's home screen like an app. It needs an internet connection.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">Can my clients see their estimates and pay online?</button>
-          <div class="faq-a">Yes! Every estimate and invoice gets a shareable link. Clients can view details, approve, and pay online with credit card or Apple Pay.</div>
+          <div class="faq-a">Yes. Every estimate and invoice has its own private link. Clients can view it, accept it, and pay by card or bank transfer from the invoice.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does it run my CNC?</button>
+          <div class="faq-a">No. CNC prep exports CNC-ready DXF files for your CAM software, one per slab or one per piece. Every file is checked against the layout before it downloads. Your CAM software and machine take it from there.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What does my crew get?</button>
+          <div class="faq-a">A web-based field app on their phones: their jobs, directions in the phone's map app, an arrival-time text to the customer, the work order and drawings, photos, a checklist, and the customer's signature at sign-off. It needs a data connection to save their work.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">How does the 30-day guarantee work?</button>
           <div class="faq-a">Try Stone Navigator for 30 days. If it's not the right fit for your shop, contact us for a full refund — no questions asked.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Can I import my existing customer data?</button>
-          <div class="faq-a">Yes. We can help you migrate your existing contacts, estimates, and job history so you don't start from scratch.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">What payment processor do you use?</button>
-          <div class="faq-a">We use Stripe — the same processor used by Amazon, Shopify, and millions of businesses. Payments go directly to your bank account.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Is my data secure?</button>
-          <div class="faq-a">Absolutely. We use bank-level encryption, secure cloud hosting, and your data is never shared with third parties. Each shop's data is completely isolated.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">Can I bring in my price list and templates?</button>
+          <div class="faq-a">Yes. Upload your slabs, labor rates, edges, cutouts and services from a spreadsheet (XLSX, XLS or CSV) and preview the changes before they're applied. Templates come into CNC prep as DXF files.</div>
         </div>
       </div>
     </div>
@@ -858,10 +877,11 @@
   <section class="final-cta">
     <div class="container">
       <div class="section-title fade-up" style="text-align:center;">Ready to run your shop<br>like a pro?</div>
-      <p class="section-desc fade-up" style="text-align:center;margin:0 auto 32px;">Join granite shops that switched from spreadsheets and sticky notes to the platform built for how they actually work.</p>
+      <p class="section-desc fade-up" style="text-align:center;margin:0 auto 32px;">Tell us about your shop and we'll get you set up, from your first drawing to your first online payment.</p>
       <div style="text-align:center;" class="fade-up">
         <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="padding:16px 40px;font-size:16px;">Get Started Today →</a>
       </div>
+      <p class="section-desc fade-up" style="text-align:center;margin:32px auto 0;font-size:15px;">Need texting, calling or email campaigns? We can set that up for your shop through a partner platform.</p>
     </div>
   </section>
 
@@ -890,14 +910,7 @@
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="#">About</a>
           <a href="mailto:stonenavigator.app@gmail.com">Contact</a>
-          <a href="#">Blog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
         </div>
       </div>
       <div class="footer-bottom">
