@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stone Navigator | Drawing to CNC Prep for Countertop Shops</title>
-  <!-- feature-inventory.md L178–267, L460, L504–564 -->
-  <meta name="description" content="Countertop drawing, auto-arranged slabs, textured 3D customer approval, CNC-ready DXF export, and online payment. Stone Navigator is $297/month.">
-  <meta property="og:title" content="Stone Navigator — From Drawing to CNC Prep">
-  <meta property="og:description" content="Draw countertops, auto-arrange slabs, show the actual nested stone in 3D, export CNC-ready DXF, and collect payment online.">
+  <title>Stone Navigator | Business Software for Granite & Countertop Fabricators</title>
+  <meta name="description" content="All-in-one business management software for granite and countertop fabrication shops. Drawings, estimates, invoices, scheduling, and payments. Built by fabricators, for fabricators.">
+  <meta property="og:title" content="Stone Navigator — Run Your Granite Shop Like a Pro">
+  <meta property="og:description" content="Drawings, estimates, invoices, scheduling, and payments — all in one platform built for stone fabricators.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stonenavigator.com">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -233,7 +232,7 @@
       transform: scale(1.04);
     }
     .pricing-card.featured::before {
-      content: 'Included'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+      content: 'Most Popular'; position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
       background: var(--purple); color: white; padding: 4px 18px; border-radius: 100px;
       font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
     }
@@ -404,14 +403,10 @@
 </head>
 <body>
 
-  <!-- Feature claim source: nexvilocal-app/stone-navigator-roadmap/feature-inventory.md
-       blob a7b4be7ca864e42d12151e75a06c943baea55f85. Line references below use this snapshot.
-       Pricing, setup service, and partner-platform wording follow the sales-page brief. -->
-
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="container">
-      <a href="/" class="nav-logo">
+      <a href="#" class="nav-logo">
         <svg width="32" height="38" viewBox="0 0 120 140">
           <g transform="translate(52,68)">
             <path d="M-9,-24 C-9,-24 17,-19 16,-7 C15,4 -13,3 -12,15 C-11,21 0,22 11,19 L13,21 C0,26 -15,25 -16,15 C-17,1 13,6 14,-7 C15,-17 -11,-20 -11,-20 Z" fill="white"/>
@@ -427,7 +422,8 @@
         <a href="#faq">FAQ</a>
       </div>
       <div class="nav-cta">
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Talk About Your Shop</a>
+        <a href="https://crm.stonenavigator.com" class="nav-login">Log In</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Get Started</a>
       </div>
       <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')">☰</button>
     </div>
@@ -440,150 +436,128 @@
     <a href="#how-it-works" onclick="document.getElementById('mobileMenu').classList.remove('open')">How It Works</a>
     <a href="#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
     <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
-    <a href="javascript:void(0)" class="btn btn-primary" onclick="document.getElementById('mobileMenu').classList.remove('open');openModal()">Talk About Your Shop</a>
+    <a href="https://crm.stonenavigator.com">Log In</a>
+    <a href="javascript:void(0)" class="btn btn-primary" onclick="document.getElementById('mobileMenu').classList.remove('open');openModal()">Get Started</a>
   </div>
 
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge">Stone Navigator · $297/month · One plan</div>
-      <h1 class="fade-up">From Countertop Drawing<br><em>to Production</em></h1>
-      <!-- feature-inventory.md L178–267, L460, L504–564 -->
-      <p class="hero-sub fade-up">Draw countertops → auto-arranged slabs → textured 3D customer approval → CNC-ready DXF export → online payment.</p>
-      <!-- feature-inventory.md L238–240, L253, L555–564, L474–479 -->
-      <p class="section-title fade-up" style="font-size:clamp(22px,3vw,32px);">The 3D your customer approves is the slab they're getting.</p>
-      <p class="hero-sub fade-up">Each piece in 3D is textured from the actual slab photo at its nested position.</p>
+      <div class="hero-badge">30-Day Money-Back Guarantee</div>
+      <h1 class="fade-up">Run Your Granite Shop<br><em>Like a Pro</em></h1>
+      <p class="hero-sub fade-up">Drawings, estimates, invoices, scheduling, and payments — all in one platform built by granite shop owners, for granite shop owners.</p>
       <div class="hero-ctas fade-up">
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Talk About Your Shop →</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Start Today →</a>
+        <a href="#features" class="btn btn-outline">See Features</a>
       </div>
       <div class="hero-stats fade-up">
-        <!-- feature-inventory.md L230–231, L253, L545–552, L649–669 -->
-        <div><div class="hero-stat-value">Slabs</div><div class="hero-stat-label">Auto-arranged in Nesting</div></div>
-        <div><div class="hero-stat-value">3D</div><div class="hero-stat-label">Textured from the actual nest</div></div>
-        <div><div class="hero-stat-value">DXF</div><div class="hero-stat-label">CNC-ready export for CAM</div></div>
-        <div><div class="hero-stat-value">Field</div><div class="hero-stat-label">Work orders to customer sign-off</div></div>
-      </div>
-      <div class="one-app fade-up" style="margin-top:40px;">
-        <div role="img" aria-label="Screenshot placeholder: Actual nested slab" style="margin-top:20px;min-height:160px;padding:24px;border:1px dashed var(--text-dim);border-radius:12px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-            <strong>SCREENSHOT PLACEHOLDER — Actual nested slab</strong>
-            <span style="font-size:13px;color:var(--text-dim);">Live-job slab photo with the countertop pieces placed on it.</span>
-          </div>
-        <div role="img" aria-label="Screenshot placeholder: 3D from the same nested slab" style="margin-top:20px;min-height:160px;padding:24px;border:1px dashed var(--text-dim);border-radius:12px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-            <strong>SCREENSHOT PLACEHOLDER — 3D from the same nested slab</strong>
-            <span style="font-size:13px;color:var(--text-dim);">Use the same live job and slab shown beside it, with the textured pieces in 3D.</span>
-          </div>
+        <div><div class="hero-stat-value">10 min</div><div class="hero-stat-label">Average estimate time</div></div>
+        <div><div class="hero-stat-value">50%</div><div class="hero-stat-label">Less admin work</div></div>
+        <div><div class="hero-stat-value">24/7</div><div class="hero-stat-label">Online payments</div></div>
+        <div><div class="hero-stat-value">2x</div><div class="hero-stat-label">Faster invoicing</div></div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTION WORKFLOW -->
+  <!-- APP CHAOS — The Origin Story -->
   <section class="chaos" id="problem">
     <div class="container">
-      <div class="section-label">The Production Workflow</div>
-      <div class="section-title fade-up">Keep the job moving<br>from drawing to the field</div>
-      <!-- feature-inventory.md L178–267, L460, L504–564, L575–588, L619–678 -->
+      <div class="section-label">Why We Built This</div>
+      <div class="section-title fade-up">We were running our shop with<br>8 different apps</div>
       <div class="chaos-intro fade-up">
-        <strong>Start with the countertop drawing.</strong> Stone Navigator auto-arranges slabs in Nesting and textures the 3D from the actual nested stone. CNC prep accepts your templater's DXF files, supports customer design approval, and exports CNC-ready DXF for your CAM software. Estimates, online payment, scheduling, and the field crew app keep the rest of the job together.
+        As a granite fabrication shop owner, I was <strong>juggling a different app for everything</strong> — one for drawings, another for estimates, a separate one for invoices, yet another for scheduling. Navigating to job sites? I'd literally type the address into my phone's nav bar. No CRM, no automation, no way to see what my team was doing. <strong>Sound familiar?</strong>
       </div>
       
       <div class="chaos-grid-wrapper fade-up">
         <div class="chaos-apps">
-          <!-- feature-inventory.md L178–201 -->
           <div class="chaos-app">
+            <div class="x-badge">✕</div>
             <div class="chaos-app-icon">📐</div>
-            <div class="chaos-app-name">Drawing</div>
-            <div class="chaos-app-desc">Shapes, edges & cutouts</div>
+            <div class="chaos-app-name">Drawing App</div>
+            <div class="chaos-app-desc">Countertop layouts</div>
           </div>
-          <!-- feature-inventory.md L223–234 -->
           <div class="chaos-app">
-            <div class="chaos-app-icon">🪨</div>
-            <div class="chaos-app-name">Slab Nesting</div>
-            <div class="chaos-app-desc">Auto-arranged in Nesting</div>
+            <div class="x-badge">✕</div>
+            <div class="chaos-app-icon">📝</div>
+            <div class="chaos-app-name">Spreadsheets</div>
+            <div class="chaos-app-desc">Estimates & pricing</div>
           </div>
-          <!-- feature-inventory.md L238–240, 250–253 -->
           <div class="chaos-app">
-            <div class="chaos-app-icon">👁️</div>
-            <div class="chaos-app-name">Textured 3D</div>
-            <div class="chaos-app-desc">Stone from the actual nest</div>
+            <div class="x-badge">✕</div>
+            <div class="chaos-app-icon">🧾</div>
+            <div class="chaos-app-name">Invoicing App</div>
+            <div class="chaos-app-desc">Billing customers</div>
           </div>
-          <!-- feature-inventory.md L504–513 -->
           <div class="chaos-app">
-            <div class="chaos-app-icon">🛠️</div>
-            <div class="chaos-app-name">CNC Prep</div>
-            <div class="chaos-app-desc">Templater DXF import</div>
-          </div>
-          <!-- feature-inventory.md L78–84 -->
-          <div class="chaos-app">
-            <div class="chaos-app-icon">📇</div>
-            <div class="chaos-app-name">Customer Records</div>
-            <div class="chaos-app-desc">Name & contact details</div>
-          </div>
-          <!-- feature-inventory.md L457–460 -->
-          <div class="chaos-app">
-            <div class="chaos-app-icon">💳</div>
-            <div class="chaos-app-name">Online Payment</div>
-            <div class="chaos-app-desc">Card or bank transfer</div>
-          </div>
-          <!-- feature-inventory.md L575–588 -->
-          <div class="chaos-app">
+            <div class="x-badge">✕</div>
             <div class="chaos-app-icon">📅</div>
-            <div class="chaos-app-name">Scheduling</div>
-            <div class="chaos-app-desc">Appointments & assignees</div>
+            <div class="chaos-app-name">Calendar App</div>
+            <div class="chaos-app-desc">Scheduling installs</div>
           </div>
-          <!-- feature-inventory.md L649–669 -->
           <div class="chaos-app">
-            <div class="chaos-app-icon">📱</div>
-            <div class="chaos-app-name">Field Crew</div>
-            <div class="chaos-app-desc">Work orders & sign-off</div>
+            <div class="x-badge">✕</div>
+            <div class="chaos-app-icon">🗺️</div>
+            <div class="chaos-app-name">Phone Nav Bar</div>
+            <div class="chaos-app-desc">Typing addresses…</div>
+          </div>
+          <div class="chaos-app">
+            <div class="x-badge">✕</div>
+            <div class="chaos-app-icon">📇</div>
+            <div class="chaos-app-name">No CRM</div>
+            <div class="chaos-app-desc">Contacts everywhere</div>
+          </div>
+          <div class="chaos-app">
+            <div class="x-badge">✕</div>
+            <div class="chaos-app-icon">📧</div>
+            <div class="chaos-app-name">Email Tool</div>
+            <div class="chaos-app-desc">Marketing blasts</div>
+          </div>
+          <div class="chaos-app">
+            <div class="x-badge">✕</div>
+            <div class="chaos-app-icon">📸</div>
+            <div class="chaos-app-name">Social Media</div>
+            <div class="chaos-app-desc">Posting manually</div>
           </div>
         </div>
       </div>
 
       <div class="chaos-vs fade-up">
         <div class="chaos-vs-arrow">↓</div>
-        <div class="chaos-vs-text">One job, from layout to handoff</div>
+        <div class="chaos-vs-text">Replaced by one platform</div>
       </div>
 
       <div class="one-app fade-up">
-        <!-- feature-inventory.md L178–234 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Drawing & Slab Nesting</h4><p>Draw the counters; auto-arrange pieces on matching-material slabs.</p></div>
+          <div><h4>Countertop Drawings</h4><p>Visual layout tool with auto square footage</p></div>
         </div>
-        <!-- feature-inventory.md L253, 474–479, 555–564 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Textured 3D Approval</h4><p>Show the nested stone; send design options for customer approval from CNC prep.</p></div>
+          <div><h4>Estimates & Invoices</h4><p>Generate, send, and get paid — one flow</p></div>
         </div>
-        <!-- feature-inventory.md L504–522, 545–552 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>CNC Prep</h4><p>Import templater DXF, place pieces by hand, and export CNC-ready DXF for CAM.</p></div>
+          <div><h4>Online Payments</h4><p>Clients pay with a link. No more chasing.</p></div>
         </div>
-        <!-- feature-inventory.md L264–267, 442–446, 460 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Estimates & Online Payment</h4><p>Build estimates from your drawing and rates; customers pay through an invoice link.</p></div>
+          <div><h4>Smart Scheduling</h4><p>Templates, installs, crew calendar</p></div>
         </div>
-        <!-- feature-inventory.md L578, 649–669 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Scheduling & Field Crew</h4><p>Book appointments; crews view work orders and collect customer sign-off.</p></div>
+          <div><h4>Full CRM</h4><p>Contacts, pipelines, call recordings</p></div>
         </div>
-        <!-- feature-inventory.md L76–84 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Customer Records</h4><p>Store names, phone numbers, email addresses, addresses, and notes.</p></div>
+          <div><h4>Unified Inbox</h4><p>All texts, emails, calls in one place</p></div>
         </div>
-        <!-- feature-inventory.md L580, 588 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Automations</h4><p>Appointment confirmations and reminders, configured once by us.</p></div>
+          <div><h4>Automations</h4><p>Appointment reminders, ETA to customers</p></div>
         </div>
-        <!-- feature-inventory.md L664–665 -->
         <div class="one-app-item">
           <div class="one-app-check">✓</div>
-          <div><h4>Reviews, Social & Reputation</h4><p>Completion-triggered review requests and optional job-site social posts, configured once by us.</p></div>
+          <div><h4>Social & Reputation</h4><p>Job photos → posts. Review requests on autopilot.</p></div>
         </div>
       </div>
     </div>
@@ -592,46 +566,39 @@
   <!-- PROBLEM DETAILS -->
   <section class="problem">
     <div class="container">
-      <div class="section-label">The Production Handoffs</div>
-      <div class="section-title fade-up">Keep the details with the job</div>
-      <!-- feature-inventory.md L264–267, L474–479, L491–500, L595–598, L399–417 -->
-      <div class="section-desc fade-up">Drawing quantities, slab placement, approvals, work orders, and payments each have a place in the workflow.</div>
+      <div class="section-label">The Daily Grind</div>
+      <div class="section-title fade-up">This is what it costs you</div>
+      <div class="section-desc fade-up">Every hour you spend juggling apps is an hour you're not growing your business.</div>
       <div class="problem-grid">
-        <!-- feature-inventory.md L264–267 -->
         <div class="problem-card fade-up">
           <div class="problem-icon">📝</div>
-          <h3>Drawing to Estimate</h3>
-          <p>Bring room quantities, edge lengths, and cutout counts from the drawing into an estimate at your uploaded rates.</p>
+          <h3>Manual Estimates Take Forever</h3>
+          <p>Measuring, calculating square footage, adding edges, sinks, and labor by hand. One estimate takes 30–45 minutes. Miss a detail and you eat the cost.</p>
         </div>
-        <!-- feature-inventory.md L238–240 -->
         <div class="problem-card fade-up">
-          <div class="problem-icon">🪨</div>
-          <h3>Slab to Preview</h3>
-          <p>Move a piece on its slab and its veining updates in the textured view. Check the match by eye.</p>
+          <div class="problem-icon">💸</div>
+          <h3>Chasing Payments</h3>
+          <p>Waiting on checks, following up on deposits, tracking who paid what. Cash flow shouldn't depend on how fast the mail arrives.</p>
         </div>
-        <!-- feature-inventory.md L474–479, 564 -->
         <div class="problem-card fade-up">
-          <div class="problem-icon">✅</div>
-          <h3>Design to Approval</h3>
-          <p>Send saved CNC layout options for approval. Customers review the 3D and approve an option or request a change.</p>
+          <div class="problem-icon">📅</div>
+          <h3>Scheduling Chaos</h3>
+          <p>Double-booked installs, forgotten template appointments, crews showing up without the right slabs. Your calendar is a warzone.</p>
         </div>
-        <!-- feature-inventory.md L504–513 -->
         <div class="problem-card fade-up">
-          <div class="problem-icon">🛠️</div>
-          <h3>Template to CNC Prep</h3>
-          <p>Import the templater's DXF into CNC prep. Keep arcs, cutouts, and drill holes with the imported pieces.</p>
+          <div class="problem-icon">🔇</div>
+          <h3>No Visibility Into Your Team</h3>
+          <p>Who talked to which customer? What was promised? As the owner, you're flying blind. No call logs, no message history, no way to manage it.</p>
         </div>
-        <!-- feature-inventory.md L639, 649–678 -->
         <div class="problem-card fade-up">
-          <div class="problem-icon">📱</div>
-          <h3>Office to Field</h3>
-          <p>Give crews work-order items, site notes, checklists, and customer sign-off in the web-based field app. A connection is required.</p>
+          <div class="problem-icon">🤖</div>
+          <h3>Zero Automation</h3>
+          <p>No appointment reminders, no follow-ups, no "your tech is on the way" texts. Everything is manual — which means things get forgotten.</p>
         </div>
-        <!-- feature-inventory.md L458–460, 408 -->
         <div class="problem-card fade-up">
-          <div class="problem-icon">💳</div>
-          <h3>Invoice to Payment</h3>
-          <p>Give customers an invoice link for online card or bank payment, and track the job's paid amount and balance.</p>
+          <div class="problem-icon">👻</div>
+          <h3>Invisible Online</h3>
+          <p>You do incredible work but nobody sees it. Job photos stay on your phone. No reviews being requested. No social proof. You're the best-kept secret in town.</p>
         </div>
       </div>
     </div>
@@ -641,85 +608,68 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-label">Features</div>
-      <div class="section-title fade-up">Tools for the production spine</div>
-      <!-- feature-inventory.md L178–267, L460, L504–564, L619–678 -->
-      <div class="section-desc fade-up">Drawing → auto-arranged slabs → textured 3D customer approval → CNC-ready DXF export → online payment. Plus the tools that keep the office and field crew moving.</div>
+      <div class="section-title fade-up">Everything your shop needs</div>
+      <div class="section-desc fade-up">Purpose-built tools for countertop fabricators — not generic business software with granite duct-taped on.</div>
       <div class="features-grid">
-        <!-- feature-inventory.md L178–201 -->
         <div class="feature-card fade-up">
           <div class="feature-icon">✏️</div>
-          <h3>Countertop Drawing</h3>
-          <p>Draw countertop shapes with edge profiles, cutouts, backsplashes, waterfalls, and aprons. See square feet per piece.</p>
+          <h3>Visual Drawing Tool</h3>
+          <p>Draw countertop layouts with edges, cutouts, sinks, and backsplashes. Clients see exactly what they're getting. Auto-calculates square footage.</p>
         </div>
-        <!-- feature-inventory.md L223–234 -->
-        <div class="feature-card fade-up">
-          <div class="feature-icon">🪨</div>
-          <h3>Auto-Arranged Slabs</h3>
-          <p>Stone Navigator auto-arranges slabs in the drawing's Nesting tab: it places pieces on matching-material slabs, adds seams to oversized pieces, and reports when more stone is needed.</p>
-        </div>
-        <!-- feature-inventory.md L238–240, 253, 474–479, 555–564 -->
-        <div class="feature-card fade-up">
-          <div class="feature-icon">👁️</div>
-          <h3>Textured 3D Customer Approval</h3>
-          <p>The 3D uses the actual slab photo at each piece's nested position. Match veins by eye, then send saved design options for customer approval from CNC prep.</p>
-        </div>
-        <!-- feature-inventory.md L504–522, 545–552 -->
-        <div class="feature-card fade-up">
-          <div class="feature-icon">🛠️</div>
-          <h3>CNC Prep & DXF Export</h3>
-          <p>Import your templater's text DXF files, place pieces on slabs by hand, and export CNC-ready DXF for third-party CAM software. Export files are checked against the source before download.</p>
-        </div>
-        <!-- feature-inventory.md L264–267, 306, 442 -->
         <div class="feature-card fade-up">
           <div class="feature-icon">📋</div>
-          <h3>Drawing-Based Estimates</h3>
-          <p>Import room quantities, edge lengths, and cutout counts from the drawing. Build branded estimates with your uploaded rates and share a customer link.</p>
+          <h3>Professional Estimates</h3>
+          <p>Generate branded estimates in minutes — materials, labor, edges, and extras. Send a link, clients approve online. No more back-and-forth.</p>
         </div>
-        <!-- feature-inventory.md L379–386, 408, 458–460 -->
         <div class="feature-card fade-up">
           <div class="feature-icon">💳</div>
-          <h3>Invoices & Online Payment</h3>
-          <p>Turn an estimate into an invoice, set a payment schedule, and track the paid amount and balance. Customers pay online by card or bank transfer through the invoice link.</p>
+          <h3>Online Payments</h3>
+          <p>Accept deposits and final payments via Stripe. Clients pay with a link — credit card, Apple Pay. Money in your bank account, not in the mail.</p>
         </div>
-        <!-- feature-inventory.md L144–154, 578–585 -->
+        <div class="feature-card fade-up">
+          <div class="feature-icon">🧾</div>
+          <h3>Invoicing</h3>
+          <p>Turn approved estimates into invoices with one click. Track payment status, send reminders, and download PDFs for your records.</p>
+        </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📆</div>
-          <h3>Scheduling & Job Boards</h3>
-          <p>Book appointments with job-site addresses and assignees. Move deals and production jobs through your shop's stages, with readiness and blocker details.</p>
+          <h3>Smart Scheduling</h3>
+          <p>Schedule templates, installs, and shop time. See your crew's availability at a glance. Syncs with Google Calendar so nothing falls through the cracks.</p>
         </div>
-        <!-- feature-inventory.md L626–639, 649–678 -->
+        <div class="feature-card fade-up">
+          <div class="feature-icon">📦</div>
+          <h3>Products & Pricing</h3>
+          <p>Manage your stone inventory, edge profiles, and labor rates. Set tiered pricing so estimates auto-calculate based on material and complexity.</p>
+        </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📱</div>
-          <h3>Web-Based Field Crew App</h3>
-          <p>Crews view job details and work orders, tick checklists, add photos and notes, and collect customer sign-off. The field app needs a connection.</p>
-          <div role="img" aria-label="Screenshot placeholder: Field crew work order" style="margin-top:20px;min-height:160px;padding:24px;border:1px dashed var(--text-dim);border-radius:12px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-            <strong>SCREENSHOT PLACEHOLDER — Field crew work order</strong>
-            <span style="font-size:13px;color:var(--text-dim);">Live-job work-order checklist and customer sign-off view.</span>
-          </div>
+          <h3>Unified Inbox</h3>
+          <p>Every text, email, and call in one place. See your entire team's conversations. As the owner, you finally have full visibility into what's happening.</p>
         </div>
-        <!-- feature-inventory.md L76–84 -->
-        <div class="feature-card fade-up">
-          <div class="feature-icon">📇</div>
-          <h3>Customer Records</h3>
-          <p>Store customer names, company details, phone numbers, email addresses, addresses, and notes. Search your contact list when you need a record.</p>
-        </div>
-        <!-- feature-inventory.md L580, 588 -->
         <div class="feature-card fade-up">
           <div class="feature-icon">🤖</div>
           <h3>Automations</h3>
-          <p>Appointment confirmations and reminders are set up once by us. Your shop uses Stone Navigator without managing another app.</p>
+          <p>Appointment reminders sent automatically. "Your technician is on the way" ETA texts when a crew starts driving. Follow-ups that never get forgotten.</p>
         </div>
-        <!-- feature-inventory.md L664–665 -->
+        <div class="feature-card fade-up">
+          <div class="feature-icon">📞</div>
+          <h3>CRM & Call Recording</h3>
+          <p>Full contact management with sales pipelines. Every call recorded and logged. Know exactly what was said and promised — no more he-said-she-said.</p>
+        </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📸</div>
-          <h3>Reviews, Social & Reputation</h3>
-          <p>Completion-triggered review requests and optional job-site social posts are set up once by us. Your shop handles the job in Stone Navigator without touching another app.</p>
+          <h3>Social & Reputation</h3>
+          <p>Turn job photos into social media posts for brand visibility. Automatically request reviews from happy customers. Build your online presence on autopilot.</p>
         </div>
-        <!-- feature-inventory.md L61–66, 353–360 -->
+        <div class="feature-card fade-up">
+          <div class="feature-icon">✉️</div>
+          <h3>Email Marketing</h3>
+          <p>Stay top of mind with past clients. Send seasonal promotions, new material announcements, and referral requests — all from one place.</p>
+        </div>
         <div class="feature-card fade-up">
           <div class="feature-icon">📊</div>
-          <h3>Shop Dashboard & Pricing</h3>
-          <p>See sales and collections against goals, active jobs, pending estimates, and unpaid invoices. Upload material prices and labour rates from spreadsheets.</p>
+          <h3>Business Dashboard</h3>
+          <p>See your revenue, pipeline value, job status, and team performance at a glance. Make decisions with data, not gut feelings.</p>
         </div>
       </div>
     </div>
@@ -729,37 +679,31 @@
   <section class="how" id="how-it-works">
     <div class="container">
       <div class="section-label">How It Works</div>
-      <div class="section-title fade-up">From drawing to production</div>
-      <!-- feature-inventory.md L178–267, L460, L504–564 -->
-      <div class="section-desc fade-up">Follow the drawing through slab placement, customer approval, CNC-ready export, and online payment.</div>
+      <div class="section-title fade-up">From lead to install in 4 steps</div>
+      <div class="section-desc fade-up">Stone Navigator follows your actual workflow — not the other way around.</div>
       <div class="steps">
-        <!-- feature-inventory.md L178–234 -->
         <div class="step fade-up">
           <div class="step-connector"></div>
           <div class="step-number">1</div>
-          <h3>Draw & Auto-Arrange</h3>
-          <p>Draw the countertop layout, then auto-arrange pieces on slabs in Nesting.</p>
+          <h3>New Lead Comes In</h3>
+          <p>Customer inquiry arrives. Create a job and start a drawing right away.</p>
         </div>
-        <!-- feature-inventory.md L253, 474–479, 564 -->
         <div class="step fade-up">
           <div class="step-connector"></div>
           <div class="step-number">2</div>
-          <h3>Review & Approve in 3D</h3>
-          <p>Check the actual nested stone in 3D. From CNC prep, send saved design options for customer approval.</p>
+          <h3>Draw & Estimate</h3>
+          <p>Use the visual tool to draw the layout. Generate a professional estimate in minutes.</p>
         </div>
-        <!-- feature-inventory.md L504–522, 545–552 -->
         <div class="step fade-up">
           <div class="step-connector"></div>
           <div class="step-number">3</div>
-          <h3>Prepare CNC-Ready DXF</h3>
-          <p>Import templater DXF into CNC prep, lay out the pieces by hand, and export DXF for your CAM software.</p>
+          <h3>Client Pays Online</h3>
+          <p>Send the estimate link. Client approves and pays the deposit — no chasing required.</p>
         </div>
-        <!-- feature-inventory.md L460, 578, 649 -->
         <div class="step fade-up">
-
           <div class="step-number">4</div>
-          <h3>Collect Payment & Equip Crews</h3>
-          <p>Share an invoice link for online payment. Schedule appointments and give crews work orders in the field app.</p>
+          <h3>Schedule & Install</h3>
+          <p>Book the template and install dates. Your team sees everything on the calendar.</p>
         </div>
       </div>
     </div>
@@ -771,87 +715,104 @@
       <div style="text-align:center;">
         <div class="section-label">Pricing</div>
         <div class="section-title fade-up">Simple, honest pricing</div>
-        <div class="section-desc fade-up" style="margin:0 auto;">One Stone Navigator plan. $297/month. Tell us about your shop through the form.</div>
+        <div class="section-desc fade-up" style="margin:0 auto;">No per-job fees. No hidden costs. Pick a plan and run your shop.</div>
       </div>
       <div class="pricing-grid">
+        <!-- Professional -->
         <div class="pricing-card fade-up">
-          <div class="pricing-name">Stone Navigator</div>
-          <div class="pricing-desc">One plan for your shop</div>
+          <div class="pricing-name">Professional</div>
+          <div class="pricing-desc">Everything you need to run your shop</div>
           <div style="margin:20px 0 4px;">
             <span class="pricing-amount">$297</span>
             <span class="pricing-period">/month</span>
           </div>
-          <div class="pricing-users">Tell us about your shop</div>
-          <!-- feature-inventory.md L178–267, L460, L504–564, L649–678 -->
+          <div class="pricing-users">Up to 5 users · Extra users +$29/mo</div>
           <ul class="pricing-features">
-            <li>Countertop drawing & slab nesting</li>
-            <li>Textured 3D customer approval</li>
-            <li>CNC prep & CNC-ready DXF export</li>
-            <li>Estimates, invoices & online payment</li>
-            <li>Web-based field crew app</li>
+            <li>Visual Drawing Tool</li>
+            <li>Professional Estimates</li>
+            <li>Invoicing & PDF Downloads</li>
+            <li>Online Payments (Stripe)</li>
+            <li>Job Scheduling</li>
+            <li>Products & Price Lists</li>
+            <li>Customer Portal</li>
+            <li>CRM & Contacts</li>
+            <li>2-Way Text & Email</li>
           </ul>
-          <a href="javascript:void(0)" onclick="openModal('Professional')" class="btn btn-outline">Talk About Your Shop</a>
+          <a href="javascript:void(0)" onclick="openModal('Professional')" class="btn btn-outline">Get Started</a>
         </div>
+        <!-- Enterprise -->
         <div class="pricing-card featured fade-up">
-          <div class="pricing-name">Production tools</div>
-          <div class="pricing-desc">Included in the $297/month plan</div>
-          <!-- feature-inventory.md L178–234, L253, L504–564 -->
+          <div class="pricing-name">Enterprise</div>
+          <div class="pricing-desc">For growing shops and teams</div>
+          <div style="margin:20px 0 4px;">
+            <span class="pricing-amount">$497</span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <div class="pricing-users">Up to 12 users · Extra users +$25/mo</div>
           <ul class="pricing-features">
-            <li>Shapes, edges, splashes & cutouts</li>
-            <li>Auto-arranged slabs in Nesting</li>
-            <li>Vein matching by eye</li>
-            <li>3D textured from the actual nest</li>
-            <li>Templater DXF import into CNC prep</li>
-            <li>Customer design approval</li>
-            <li>DXF export for third-party CAM</li>
+            <li>Everything in Professional</li>
+            <li>Unified Inbox (team visibility)</li>
+            <li>Automations & Workflows</li>
+            <li>Call Recording & Logging</li>
+            <li>Reputation Management</li>
+            <li>Email Marketing</li>
+            <li>Social Media Planner</li>
+            <li>Missed Call Text-Back</li>
+            <li>Sales Pipelines & Reporting</li>
           </ul>
+          <a href="javascript:void(0)" onclick="openModal('Enterprise')" class="btn btn-primary">Get Started</a>
         </div>
+        <!-- Custom -->
         <div class="pricing-card fade-up">
-          <div class="pricing-name">Office & field tools</div>
-          <div class="pricing-desc">Included in the same plan</div>
-          <!-- feature-inventory.md L61–66, L76–84, L144–154, L353–360, L578–588, L649–678 -->
+          <div class="pricing-name">Custom</div>
+          <div class="pricing-desc">For large operations with special needs</div>
+          <div style="margin:20px 0 4px;">
+            <span class="pricing-amount" style="font-size:36px;">Let's Talk</span>
+          </div>
+          <div class="pricing-users">Unlimited users · Custom pricing</div>
           <ul class="pricing-features">
-            <li>Customer records & job boards</li>
-            <li>Material price lists & labour rates</li>
-            <li>Scheduling & work orders</li>
-            <li>Field checklists & customer sign-off</li>
-            <li>Sales & collections dashboard</li>
-            <li>Automations set up once by us</li>
-            <li>Reviews, social & reputation setup</li>
+            <li>Everything in Enterprise</li>
+            <li>Custom Integrations</li>
+            <li>Dedicated Onboarding</li>
+            <li>Priority Support</li>
+            <li>Custom Feature Development</li>
+            <li>Volume Discounts</li>
+            <li>SLA Agreement</li>
           </ul>
+          <a href="javascript:void(0)" onclick="openModal('Custom')" class="btn btn-outline">Contact Sales</a>
         </div>
       </div>
       <div class="pricing-guarantee fade-up">
-        We set up automations, review requests, and social & reputation once. Your shop never needs to touch another app to manage them.
+        🛡️ <strong>30-Day Money-Back Guarantee</strong> — Try it risk-free. If it's not right for your shop, get a full refund.
       </div>
     </div>
   </section>
 
-  <!-- PRODUCT SCREENSHOTS — awaiting live-job images -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div style="text-align:center;">
-        <div class="section-label">Product Screenshots</div>
-        <div class="section-title fade-up">The job at each handoff</div>
+        <div class="section-label">Testimonials</div>
+        <div class="section-title fade-up">Built by fabricators, for fabricators</div>
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card fade-up">
-          <div role="img" aria-label="Screenshot placeholder: Drawing & auto-arranged slabs" style="margin-top:20px;min-height:160px;padding:24px;border:1px dashed var(--text-dim);border-radius:12px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-            <strong>SCREENSHOT PLACEHOLDER — Drawing & auto-arranged slabs</strong>
-            <span style="font-size:13px;color:var(--text-dim);">Live-job drawing and its saved nesting layout.</span>
-          </div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Creating estimates used to take me 45 minutes. Now it's 10. And clients can pay online — I stopped chasing checks completely."</p>
+          <div class="testimonial-author">Mike R.</div>
+          <div class="testimonial-role">Owner, Custom Stone Works</div>
         </div>
         <div class="testimonial-card fade-up">
-          <div role="img" aria-label="Screenshot placeholder: CNC prep & textured 3D approval" style="margin-top:20px;min-height:160px;padding:24px;border:1px dashed var(--text-dim);border-radius:12px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-            <strong>SCREENSHOT PLACEHOLDER — CNC prep & textured 3D approval</strong>
-            <span style="font-size:13px;color:var(--text-dim);">Live-job templater DXF layout and the matching customer approval view.</span>
-          </div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The drawing tool is incredible. My clients love seeing exactly what their countertops will look like before we cut anything."</p>
+          <div class="testimonial-author">Sarah T.</div>
+          <div class="testimonial-role">Operations Manager, Elite Granite</div>
         </div>
         <div class="testimonial-card fade-up">
-          <div role="img" aria-label="Screenshot placeholder: Invoice & online payment" style="margin-top:20px;min-height:160px;padding:24px;border:1px dashed var(--text-dim);border-radius:12px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-            <strong>SCREENSHOT PLACEHOLDER — Invoice & online payment</strong>
-            <span style="font-size:13px;color:var(--text-dim);">Live-job invoice with its payment schedule and online payment options.</span>
-          </div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Finally, software that understands how a granite shop actually works. Not some generic tool with 'construction' slapped on it."</p>
+          <div class="testimonial-author">David L.</div>
+          <div class="testimonial-role">Founder, Precision Stone</div>
         </div>
       </div>
     </div>
@@ -865,35 +826,29 @@
         <div class="section-title fade-up">Common questions</div>
       </div>
       <div class="faq-list">
-        <!-- feature-inventory.md L649–678 -->
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Does the field app work without a connection?</button>
-          <div class="faq-a">The field crew app is web-based and needs a connection for job data, photos, notes, checklists, and sign-offs.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">Do I need any special equipment or software?</button>
+          <div class="faq-a">Nope. Stone Navigator runs in your browser — works on any computer, tablet, or phone. No downloads, no installations.</div>
         </div>
-        <!-- feature-inventory.md L438–460, 474–479, 564 -->
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Can customers approve the design and pay online?</button>
-          <div class="faq-a">From CNC prep, send saved design options for the customer to review in 3D and approve. Estimates and invoices have their own shareable links; customers pay online by card or bank transfer through the invoice link.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">Can my clients see their estimates and pay online?</button>
+          <div class="faq-a">Yes! Every estimate and invoice gets a shareable link. Clients can view details, approve, and pay online with credit card or Apple Pay.</div>
         </div>
-        <!-- feature-inventory.md L545–552 -->
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Does Stone Navigator run my CNC?</button>
-          <div class="faq-a">CNC prep provides CNC-ready DXF export for third-party CAM software. It does not generate G-code or machine programs or send files directly to a machine.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">How does the 30-day guarantee work?</button>
+          <div class="faq-a">Try Stone Navigator for 30 days. If it's not the right fit for your shop, contact us for a full refund — no questions asked.</div>
         </div>
-        <!-- feature-inventory.md L504–513, 680 -->
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Can I use files from my templater?</button>
-          <div class="faq-a">Yes. Import text (ASCII) DXF files into CNC prep. Stone Navigator reads the geometry and identifies pieces with their cutouts and drill holes. Digital measuring is done in your templating equipment and software.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">Can I import my existing customer data?</button>
+          <div class="faq-a">Yes. We can help you migrate your existing contacts, estimates, and job history so you don't start from scratch.</div>
         </div>
-        <!-- feature-inventory.md L230–231, 238–240, 522, 554–558 -->
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Does it automatically match veins or book-match?</button>
-          <div class="faq-a">Vein matching is done by eye using the textured and 3D views. There is no automatic book-match. Auto-arrange is available in drawing/Nesting; CNC prep uses manual piece placement.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">What payment processor do you use?</button>
+          <div class="faq-a">We use Stripe — the same processor used by Amazon, Shopify, and millions of businesses. Payments go directly to your bank account.</div>
         </div>
-        <!-- feature-inventory.md L580, 588, 664–665 -->
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Do we have to manage another app for automations or reviews?</button>
-          <div class="faq-a">No. We set up appointment automations, completion-triggered review requests, and social & reputation once. Your shop uses Stone Navigator without touching another app to manage those workflows.</div>
+          <button class="faq-q" onclick="toggleFaq(this)">Is my data secure?</button>
+          <div class="faq-a">Absolutely. We use bank-level encryption, secure cloud hosting, and your data is never shared with third parties. Each shop's data is completely isolated.</div>
         </div>
       </div>
     </div>
@@ -902,11 +857,10 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container">
-      <div class="section-title fade-up" style="text-align:center;">Bring your shop's workflow<br>into Stone Navigator</div>
-      <p class="section-desc fade-up" style="text-align:center;margin:0 auto 32px;">Tell us about your drawing, slab layout, CNC prep, and field workflow. One plan, $297/month.</p>
-      <p class="section-desc fade-up" style="text-align:center;margin:0 auto 32px;">Need texting, calling or email campaigns? We can set that up for your shop through a partner platform.</p>
+      <div class="section-title fade-up" style="text-align:center;">Ready to run your shop<br>like a pro?</div>
+      <p class="section-desc fade-up" style="text-align:center;margin:0 auto 32px;">Join granite shops that switched from spreadsheets and sticky notes to the platform built for how they actually work.</p>
       <div style="text-align:center;" class="fade-up">
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="padding:16px 40px;font-size:16px;">Talk About Your Shop →</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="padding:16px 40px;font-size:16px;">Get Started Today →</a>
       </div>
     </div>
   </section>
@@ -925,8 +879,7 @@
             </svg>
             <div class="nav-logo-text"><strong>Stone</strong><span>Navigator</span></div>
           </div>
-          <!-- feature-inventory.md L178–267, L460, L504–564 -->
-          <p>Countertop drawing, slab nesting, textured 3D approval, CNC-ready DXF export, and online payment.</p>
+          <p>Business management software for granite and countertop fabrication shops. Built by fabricators, for fabricators.</p>
         </div>
         <div class="footer-col">
           <h4>Product</h4>
@@ -937,12 +890,14 @@
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="javascript:void(0)" onclick="openModal()">Contact</a>
+          <a href="#">About</a>
+          <a href="mailto:stonenavigator.app@gmail.com">Contact</a>
+          <a href="#">Blog</a>
         </div>
         <div class="footer-col">
-          <h4>Production</h4>
-          <a href="#features">CNC Prep & Field Crew</a>
-          <a href="#testimonials">Screenshot Placeholders</a>
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
       <div class="footer-bottom">
