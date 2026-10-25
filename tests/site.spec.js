@@ -50,7 +50,7 @@ test('FAQ answers open and close', async ({ page }) => {
 
 test('plan buttons select the intended plan and modal closes', async ({ page }) => {
   await page.goto('/');
-  for (const plan of ['Professional', 'Enterprise', 'Custom']) {
+  for (const plan of ['Starter', 'Professional', 'Enterprise']) {
     await page.locator(`a[onclick="openModal('${plan}')"]`).click();
     await expect(page.locator('#contactModal')).toHaveClass(/open/);
     await expect(page.locator('#planSelect')).toHaveValue(new RegExp(plan));
